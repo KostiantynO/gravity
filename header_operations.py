@@ -64,7 +64,7 @@ set_result_string               = 60  # sets the result string for game scripts 
 
 is_camera_in_first_person       = 61  # (is_camera_in_first_person),
 set_camera_in_first_person      = 62  # (set_camera_in_first_person, <value>), # 1 = first, 0 = third person
- 
+
 game_key_get_mapped_key_name    = 65  # (game_key_get_mapped_key_name, <string_register>, <game_key>),
 
 key_is_down                     = 70  # fails if the key is not currently down (key_is_down, <key_id>),
@@ -167,7 +167,7 @@ player_control_agent                 = 421 # (player_control_agent, <player_id>,
 player_get_item_id                   = 422 # (player_get_item_id, <destination>, <player_id>, <item_slot_no>), #only for server
 player_get_banner_id                 = 423 # (player_get_banner_id, <destination>, <player_id>),
 game_get_reduce_campaign_ai          = 424 # (game_get_reduce_campaign_ai, <destination>), #depreciated, use options_get_campaign_ai instead
-multiplayer_find_spawn_point         = 425 # (multiplayer_find_spawn_point, <destination>, <team_no>, <examine_all_spawn_points>, <is_horseman>), 
+multiplayer_find_spawn_point         = 425 # (multiplayer_find_spawn_point, <destination>, <team_no>, <examine_all_spawn_points>, <is_horseman>),
 set_spawn_effector_scene_prop_kind   = 426 # (set_spawn_effector_scene_prop_kind <team_no> <scene_prop_kind_no>)
 set_spawn_effector_scene_prop_id     = 427 # (set_spawn_effector_scene_prop_id <scene_prop_id>)
 
@@ -235,7 +235,7 @@ server_set_friendly_fire_damage_friend_ratio = 498 # (server_set_friendly_fire_d
 server_get_anti_cheat                = 499 # (server_get_anti_cheat, <destination>),
 server_set_anti_cheat                = 477 # (server_set_anti_cheat, <value>), #0 = off, 1 = on
 
-## Set_slot operations. These assign a value to a slot. 
+## Set_slot operations. These assign a value to a slot.
 troop_set_slot                  = 500 # (troop_set_slot,<troop_id>,<slot_no>,<value>),
 party_set_slot                  = 501 # (party_set_slot,<party_id>,<slot_no>,<value>),
 faction_set_slot                = 502 # (faction_set_slot,<faction_id>,<slot_no>,<value>),
@@ -248,7 +248,7 @@ player_set_slot                 = 508 # (player_set_slot,<player_id>,<slot_no>,<
 team_set_slot                   = 509 # (team_set_slot,<team_id>,<slot_no>,<value>),
 scene_prop_set_slot             = 510 # (scene_prop_set_slot,<scene_prop_instance_id>,<slot_no>,<value>),
 
-## Get_slot operations. These retrieve the value of a slot. 
+## Get_slot operations. These retrieve the value of a slot.
 troop_get_slot                  = 520 # (troop_get_slot,<destination>,<troop_id>,<slot_no>),
 party_get_slot                  = 521 # (party_get_slot,<destination>,<party_id>,<slot_no>),
 faction_get_slot                = 522 # (faction_get_slot,<destination>,<faction_id>,<slot_no>),
@@ -337,9 +337,9 @@ position_get_scale_x            = 735 # (position_get_scale_x,<destination_fixed
 position_get_scale_y            = 736 # (position_get_scale_y,<destination_fixed_point>,<position_no>), #y scale in meters * fixed point multiplier is returned
 position_get_scale_z            = 737 # (position_get_scale_z,<destination_fixed_point>,<position_no>), #z scale in meters * fixed point multiplier is returned
 
-position_rotate_x_floating      = 738 # (position_rotate_x_floating,<position_no>,<angle>), #angle in degree * fixed point multiplier 
-position_rotate_y_floating      = 739 # (position_rotate_y_floating,<position_no>,<angle>), #angle in degree * fixed point multiplier 
-position_rotate_z_floating      = 734 # (position_rotate_z_floating,<position_no>,<angle>), #angle in degree * fixed point multiplier 
+position_rotate_x_floating      = 738 # (position_rotate_x_floating,<position_no>,<angle>), #angle in degree * fixed point multiplier
+position_rotate_y_floating      = 739 # (position_rotate_y_floating,<position_no>,<angle>), #angle in degree * fixed point multiplier
+position_rotate_z_floating      = 734 # (position_rotate_z_floating,<position_no>,<angle>), #angle in degree * fixed point multiplier
 
 position_get_rotation_around_z  = 740 # (position_get_rotation_around_z,<destination>,<position_no>), #rotation around z axis is returned as angle
 position_normalize_origin       = 741 # (position_normalize_origin,<destination_fixed_point>,<position_no>),
@@ -502,8 +502,8 @@ tutorial_box                    = 1120 # (tutorial_box,<string_id>,<string_id>),
 dialog_box                      = 1120 # (dialog_box,<text_string_id>,<title_string_id>),
 question_box                    = 1121 # (question_box,<string_id>, [<yes_string_id>], [<no_string_id>]),
 tutorial_message                = 1122 # (tutorial_message,<string_id>, <color>, <auto_close_time>), #set string_id = -1 for hiding the message
-tutorial_message_set_position   = 1123 # (tutorial_message_set_position, <position_x>, <position_y>), 
-tutorial_message_set_size       = 1124 # (tutorial_message_set_size, <size_x>, <size_y>), 
+tutorial_message_set_position   = 1123 # (tutorial_message_set_position, <position_x>, <position_y>),
+tutorial_message_set_size       = 1124 # (tutorial_message_set_size, <size_x>, <size_y>),
 tutorial_message_set_center_justify = 1125 # (tutorial_message_set_center_justify, <val>), #set not 0 for center justify, 0 for not center justify
 tutorial_message_set_background = 1126 # (tutorial_message_set_background, <value>), #1 = on, 0 = off, default is off
 
@@ -607,7 +607,7 @@ troop_raise_proficiency                = 1522	# (troop_raise_proficiency,<troop_
 troop_raise_proficiency_linear         = 1523	# raises weapon proficiencies linearly without being limited by weapon master skill
 						# (troop_raise_proficiency,<troop_id>,<proficiency_no>,<value>),
 
-troop_add_proficiency_points           = 1525   # (troop_add_proficiency_points,<troop_id>,<value>),					
+troop_add_proficiency_points           = 1525   # (troop_add_proficiency_points,<troop_id>,<value>),
 troop_add_gold                         = 1528	# (troop_add_gold,<troop_id>,<value>),
 troop_remove_gold                      = 1529	# (troop_remove_gold,<troop_id>,<value>),
 troop_add_item                         = 1530	# (troop_add_item,<troop_id>,<item_id>,[modifier]),
@@ -621,7 +621,7 @@ troop_inventory_slot_get_item_max_amount = 1538  # (troop_inventory_slot_get_ite
 troop_add_items                        = 1535	# (troop_add_items,<troop_id>,<item_id>,<number>),
 troop_remove_items                     = 1536	# puts cost of items to reg0
                                                 # (troop_remove_items,<troop_id>,<item_id>,<number>),
-troop_loot_troop                       = 1539	# (troop_loot_troop,<target_troop>,<source_troop_id>,<probability>), 
+troop_loot_troop                       = 1539	# (troop_loot_troop,<target_troop>,<source_troop_id>,<probability>),
 
 troop_get_inventory_capacity           = 1540	# (troop_get_inventory_capacity,<destination>,<troop_id>),
 troop_get_inventory_slot               = 1541	# (troop_get_inventory_slot,<destination>,<troop_id>,<inventory_slot_no>),
@@ -745,7 +745,7 @@ agent_is_in_special_mode               = 1693   # (agent_is_in_special_mode,<age
 party_get_attached_to                  = 1694   # (party_get_attached_to, <destination>, <party_id>),
 party_get_num_attached_parties         = 1695   # (party_get_num_attached_parties, <destination>, <party_id>),
 party_get_attached_party_with_rank     = 1696   # (party_get_attached_party_with_rank, <destination>, <party_id>, <attached_party_no>),
-inflict_casualties_to_party_group      = 1697   # (inflict_casualties_to_party, <parent_party_id>, <attack_rounds>, <party_id_to_add_causalties_to>), 
+inflict_casualties_to_party_group      = 1697   # (inflict_casualties_to_party, <parent_party_id>, <attack_rounds>, <party_id_to_add_causalties_to>),
 distribute_party_among_party_group     = 1698   # (distribute_party_among_party_group, <party_to_be_distributed>, <group_root_party>),
 agent_is_routed                        = 1699   # (agent_is_routed,<agent_id>),
 
@@ -800,7 +800,7 @@ agent_force_rethink                    = 1732 # (agent_force_rethink, <agent_id>
 agent_set_no_death_knock_down_only     = 1733 # (agent_set_no_death_knock_down_only, <agent_id>, <value>), #0 for disable, 1 for enable
 agent_set_horse_speed_factor           = 1734 # (agent_set_horse_speed_factor, <agent_id>, <speed_multiplier-in-1/100>),
 agent_clear_scripted_mode              = 1735	# (agent_clear_scripted_mode,<agent_id>),
-agent_set_speed_limit                  = 1736   # (agent_set_speed_limit,<agent_id>,<speed_limit(kilometers/hour)>), #Affects AI only 
+agent_set_speed_limit                  = 1736   # (agent_set_speed_limit,<agent_id>,<speed_limit(kilometers/hour)>), #Affects AI only
 agent_ai_set_always_attack_in_melee    = 1737   # (agent_ai_set_always_attack_in_melee, <agent_id>,<value>), #to be used in sieges so that agents don't wait on the ladder.
 agent_get_simple_behavior              = 1738   # (agent_get_simple_behavior, <destination>, <agent_id>), #constants are written in header_mission_templates.py, starting with aisb_
 agent_get_combat_state                 = 1739   # (agent_get_combat_state, <destination>, <agent_id>),
@@ -869,7 +869,7 @@ team_get_hold_fire_order               = 1784   # (team_get_hold_fire_order, <de
 team_get_movement_order                = 1785   # (team_get_movement_order, <destination>, <team_no>, <sub_class>),
 team_get_riding_order                  = 1786   # (team_get_riding_order, <destination>, <team_no>, <sub_class>),
 team_get_weapon_usage_order            = 1787   # (team_get_weapon_usage_order, <destination>, <team_no>, <sub_class>),
-teams_are_enemies                      = 1788   # (teams_are_enemies, <team_no>, <team_no_2>), 
+teams_are_enemies                      = 1788   # (teams_are_enemies, <team_no>, <team_no_2>),
 team_give_order                        = 1790   # (team_give_order, <team_no>, <sub_class>, <order_id>),
 team_set_order_position                = 1791   # (team_set_order_position, <team_no>, <sub_class>, <position_no>),
 team_get_leader                        = 1792   # (team_get_leader, <destination>, <team_no>),
@@ -947,7 +947,7 @@ prop_instance_get_animation_target_position = 1863    # (prop_instance_get_anima
 prop_instance_enable_physics           = 1864   # (prop_instance_enable_physics, <scene_prop_id>, <value>), #0 for disable, 1 for enable
 prop_instance_rotate_to_position       = 1865	# (prop_instance_rotate_to_position, <scene_prop_id>, position, <duration-in-1/100-seconds>, <total_rotate_angle>),
 prop_instance_initialize_rotation_angles = 1866   # (prop_instance_initialize_rotation_angles, <scene_prop_id>),
-prop_instance_refill_hit_points        = 1870 # (prop_instance_refill_hit_points, <scene_prop_id>), 
+prop_instance_refill_hit_points        = 1870 # (prop_instance_refill_hit_points, <scene_prop_id>),
 
 prop_instance_dynamics_set_properties  = 1871 # (prop_instance_dynamics_set_properties,<scene_prop_id>,mass_friction),
 prop_instance_dynamics_set_velocity    = 1872 # (prop_instance_dynamics_set_velocity,<scene_prop_id>,linear_velocity),
@@ -1004,7 +1004,7 @@ particle_system_add_new                = 1965	# (particle_system_add_new,<par_sy
 particle_system_emit                   = 1968	# (particle_system_emit,<par_sys_id>,<value_num_particles>,<value_period>),
 particle_system_burst                  = 1969	# (particle_system_burst,<par_sys_id>,<position_no>,[percentage_burst_strength]),
 
-set_spawn_position                     = 1970   # (set_spawn_position, <position_no>), 
+set_spawn_position                     = 1970   # (set_spawn_position, <position_no>),
 spawn_item                             = 1971   # (spawn_item, <item_kind_id>, <item_modifier>, [seconds_before_pruning]), #if seconds_before_pruning = 0 then item never gets pruned
 spawn_agent                            = 1972	# (spawn_agent,<troop_id>), (stores agent_id in reg0)
 spawn_horse                            = 1973	# (spawn_horse,<item_kind_id>, <item_modifier>),  (stores agent_id in reg0)
@@ -1037,7 +1037,7 @@ cur_tableau_add_mesh_with_vertex_color = 1993   # (cur_tableau_add_mesh_with_ver
 
 cur_tableau_add_map_icon               = 1994   # (cur_tableau_add_map_icon, <map_icon_id>, <position_no>, <value_fixed_point>),
                                                 # value fixed point is the scale factor
-                                                
+
 cur_tableau_add_troop                  = 1995   # (cur_tableau_add_troop, <troop_id>, <position_no>, <animation_id>, <instance_no>), #if instance_no value is 0 or less, then the face is not generated randomly (important for heroes)
 cur_tableau_add_horse                  = 1996   # (cur_tableau_add_horse, <item_id>, <position_no>, <animation_id>),
 cur_tableau_set_override_flags         = 1997   # (cur_tableau_set_override_flags, <value>),
@@ -1045,7 +1045,7 @@ cur_tableau_clear_override_items       = 1998   # (cur_tableau_clear_override_it
 cur_tableau_add_override_item          = 1999   # (cur_tableau_add_override_item, <item_kind_id>),
 cur_tableau_add_mesh_with_scale_and_vertex_color = 2000   # (cur_tableau_add_mesh_with_scale_and_vertex_color, <mesh_id>, <position_no>, <position_no>, <value_fixed_point>, <value>),
                                                 # second position_no is x,y,z scale factors (with fixed point values). value fixed point is alpha. value is vertex color. use 0 for default values. scale and vertex_color has no default values.
- 
+
 mission_cam_set_mode                   = 2001   # (mission_cam_set_mode, <mission_cam_mode>, <duration-in-1/1000-seconds>, <value>), # when leaving manual mode, duration defines the animation time from the initial position to the new position. set as 0 for instant camera position update
                                                                                                                                     # if value = 0, then camera velocity will be linear. else it will be non-linear
 mission_get_time_speed                 = 2002   # (mission_get_time_speed, <destination_fixed_point>),
@@ -1193,7 +1193,7 @@ assign                 = 2133	# had to put this here so that it can be called fr
 shuffle_range          = 2134	# (shuffle_range,<reg_no>,<reg_no>),
 
 store_random           = 2135	# deprecated, use store_random_in_range instead.
-store_random_in_range  = 2136	# gets random number in range [range_low,range_high] excluding range_high 
+store_random_in_range  = 2136	# gets random number in range [range_low,range_high] excluding range_high
 				# (store_random_in_range,<destination>,<range_low>,<range_high>),
 
 store_asin             = 2140  # (store_asin, <destination_fixed_point>, <value_fixed_point>),
@@ -1350,7 +1350,7 @@ store_normalized_team_count = 2385 #(store_normalized_team_count,<destination>, 
 set_postfx                  = 2386
 set_river_shader_to_mud     = 2387 #changes river material for muddy env
 show_troop_details          = 2388 # (show_troop_details, <troop_id>, <position>, <troop_price>)
-set_skybox                  = 2389 # (set_skybox, <non_hdr_skybox_index>, <hdr_skybox_index>)	#forces selected skybox for a scene, use -1 to disable 
+set_skybox                  = 2389 # (set_skybox, <non_hdr_skybox_index>, <hdr_skybox_index>)	#forces selected skybox for a scene, use -1 to disable
 set_startup_sun_light       = 2390 # (set_startup_sun_light, <r>, <g>, <b>)	#changes the sun light color
 set_startup_ambient_light   = 2391 # (set_startup_ambient_light, <r>, <g>, <b>)	#changes the ambient light color
 set_startup_ground_ambient_light = 2392 # (set_startup_ground_ambient_light, <r>, <g>, <b>)	#changes the ground ambient light color
@@ -1504,7 +1504,7 @@ lhs_operations = [try_for_range,
                   get_distance_between_positions_in_meters,
                   get_sq_distance_between_positions,
                   get_sq_distance_between_positions_in_meters,
-                  get_sq_distance_between_position_heights,                  
+                  get_sq_distance_between_position_heights,
                   position_get_x,
                   position_get_y,
                   position_get_z,
@@ -1531,7 +1531,7 @@ lhs_operations = [try_for_range,
                   create_mesh_overlay_with_tableau_material,
                   create_game_button_overlay,
                   create_in_game_button_overlay,
-                  create_number_box_overlay, 
+                  create_number_box_overlay,
                   create_listbox_overlay,
                   create_mesh_overlay_with_item_id,
                   overlay_get_position,
@@ -1606,7 +1606,7 @@ lhs_operations = [try_for_range,
                   agent_get_animation,
                   agent_get_team,
                   agent_get_class,
-                  agent_get_division,                  
+                  agent_get_division,
                   team_get_hold_fire_order,
                   team_get_movement_order,
                   team_get_riding_order,

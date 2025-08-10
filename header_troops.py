@@ -211,7 +211,7 @@ def level(v):
   if (v > level_mask):
     v = level_mask
   return (bignum|v) << level_bits
-  
+
 def_attrib = str_5 | agi_5 | int_4 | cha_4
 
 # Weapon proficiencies:
@@ -271,7 +271,7 @@ def upgrade(troops,troop1_id,troop2_id):
       cur_troop[13:13] = [0, troop2_no, 0]
     else:
       cur_troop[14:14] = [troop2_no, 0]
-      
+
 
 def upgrade2(troops,troop1_id,troop2_id,troop3_id):
   troop1_no = find_troop(troops,troop1_id)
