@@ -1,3 +1,4 @@
+# ID_scripts.py
 script_game_start = 0
 script_game_get_use_string = 1
 script_game_quick_start = 2

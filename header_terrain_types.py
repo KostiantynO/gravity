@@ -1,3 +1,4 @@
+# header_terrain_types.py
 rt_water = 0
 rt_mountain = 1
 rt_steppe = 2

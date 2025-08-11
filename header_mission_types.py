@@ -1,3 +1,4 @@
+# header_mission_types.py
 leave_wo_battle = 0
 leave_during_battle = 1
 cancel_attack = 2

@@ -1,3 +1,4 @@
+# ID_mission_templates.py
 mst_town_default = 0
 mst_conversation_encounter = 1
 mst_town_center = 2

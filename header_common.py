@@ -1,3 +1,4 @@
+# header_common.py
 ###################################################
 # header_common.py
 # This file contains common declarations.
@@ -407,8 +408,8 @@ opmask_quick_string         =  tag_quick_string   << op_num_value_bits
 
 def reg(reg_no):
   if (reg_no < 0):
-    print ("Error register_no negative")
-    cause_error()
+    print("Error register_no negative")
+    raise Exception("Error register_no negative")
   return opmask_register | reg_no
 
 def find_object(objects,object_id):

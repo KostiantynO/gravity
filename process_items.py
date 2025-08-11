@@ -1,3 +1,4 @@
+# process_items.py
 import string
 
 from process_common import *
@@ -9,14 +10,14 @@ def get_item_code(item):
   return code
 
 def save_python_header():
-  file = open("./ID_items.py","w")
-  for i_item in xrange(len(items)):
+  file = open("./ID_items.py","w",newline="\n")
+  for i_item in range(len(items)):
     file.write("itm_%s = %d\n"%(convert_to_identifier(items[i_item][0]),i_item))
   file.close()
 
 def write_items(variable_list,variable_uses,tag_uses,quick_strings):
   itemkinds_file_name = export_dir + "item_kinds1.txt"
-  ofile = open(itemkinds_file_name,"w")
+  ofile = open(itemkinds_file_name,"w",newline="\n")
   ofile.write("itemsfile version 3\n")
   ofile.write("%d\n"%len(items))
   for item in items:
@@ -57,7 +58,7 @@ def write_items(variable_list,variable_uses,tag_uses,quick_strings):
 
   ofile.close()
 
-print "Exporting item data..."
+print("Exporting item data...")
 save_python_header()
 
 from module_info import *
@@ -73,4 +74,4 @@ write_items(variables,variable_uses,tag_uses,quick_strings)
 save_variables(export_dir,variables,variable_uses)
 save_tag_uses(export_dir,tag_uses)
 save_quick_strings(export_dir,quick_strings)
-#print "Finished with Items."
+#print("Finished with Items.")

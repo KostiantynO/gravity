@@ -1,3 +1,4 @@
+# process_game_menus.py
 import string
 import types
 
@@ -19,7 +20,7 @@ def save_game_menu_item(ofile,variable_list,variable_uses,menu_item,tag_uses,qui
 
 
 def save_game_menus(variable_list,variable_uses,tag_uses,quick_strings):
-  ofile = open(export_dir + "menus.txt","w")
+  ofile = open(export_dir + "menus.txt","w",newline="\n")
   ofile.write("menusfile version 1\n")
   ofile.write(" %d\n"%(len(game_menus)))
   for game_menu in game_menus:
@@ -33,12 +34,12 @@ def save_game_menus(variable_list,variable_uses,tag_uses,quick_strings):
   ofile.close()
 
 def save_python_header():
-  ofile = open("./ID_menus.py","w")
-  for i_game_menu in xrange(len(game_menus)):
+  ofile = open("./ID_menus.py","w",newline="\n")
+  for i_game_menu in range(len(game_menus)):
     ofile.write("menu_%s = %d\n"%(game_menus[i_game_menu][0],i_game_menu))
   ofile.close()
 
-print "Exporting game menus data..."
+print("Exporting game menus data...")
 save_python_header()
 variable_uses = []
 variables = load_variables(export_dir, variable_uses)

@@ -1,3 +1,4 @@
+# header_map_icons.py
 ###################################################
 # header_map_icons.py
 # This file contains declarations for module_map_icons

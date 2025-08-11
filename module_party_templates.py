@@ -1,3 +1,4 @@
+# module_party_templates.py
 from header_common import *
 from header_parties import *
 from ID_troops import *

@@ -1,3 +1,4 @@
+# module_dialogs.py
 # -*- coding: cp1254 -*-
 from header_common import *
 from header_dialogs import *

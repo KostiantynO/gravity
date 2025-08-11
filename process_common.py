@@ -1,5 +1,5 @@
+# process_common.py
 import string
-import types
 
 def convert_to_identifier(s0):
   s1 = string.replace(s0," ","_")

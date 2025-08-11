@@ -1,3 +1,4 @@
+# ID_tableau_materials.py
 tableau_game_character_sheet = 0
 tableau_game_inventory_window = 1
 tableau_game_profile_window = 2

@@ -1,3 +1,4 @@
+# ID_animations.py
 anim_stand = 0
 anim_stand_man = 1
 anim_stand_player_first_person = 2

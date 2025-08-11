@@ -1,3 +1,4 @@
+# process_parties.py
 import types
 from header_game_menus import *
 from module_info import *
@@ -9,10 +10,10 @@ from process_common import *
 
 
 def save_parties(parties):
-  file = open(export_dir + "parties.txt","w")
+  file = open(export_dir + "parties.txt","w",newline="\n")
   file.write("partiesfile version 1\n")
   file.write("%d %d\n"%(len(parties), len(parties)))
-  for i_party in xrange(len(parties)):
+  for i_party in range(len(parties)):
     party = parties[i_party]
     if (party[5] >= 0):
       add_tag_use(tag_uses,tag_faction,party[5])
@@ -25,7 +26,7 @@ def save_parties(parties):
     if (type(menu_param) == types.StringType):
       menu_no = find_object(game_menus,menu_param)
       if (menu_no < 0):
-        print "Error: Unable to find menu-id :" + menu_param
+        print("Error: Unable to find menu-id :" + menu_param)
     else:
       menu_no = menu_param
     file.write("%d "%(menu_no))
@@ -36,7 +37,7 @@ def save_parties(parties):
     if (type(ai_param) == types.StringType):
       ai_behavior_object = find_object(parties,ai_param)
       if (ai_behavior_object < 0):
-        print "Error: Unable to find party-id :" + ai_param
+        print("Error: Unable to find party-id :" + ai_param)
     else:
       ai_behavior_object = ai_param
     file.write("%d %d "%(ai_behavior_object,ai_behavior_object))
@@ -57,18 +58,18 @@ def save_parties(parties):
   file.close()
 
 def save_python_header(parties):
-  file = open("./ID_parties.py","w")
-  for i_party in xrange(len(parties)):
+  file = open("./ID_parties.py","w",newline="\n")
+  for i_party in range(len(parties)):
     file.write("p_%s = %d\n"%(convert_to_identifier(parties[i_party][0]),i_party))
   file.close()
 
 
-print "Exporting parties"
+print("Exporting parties")
 tag_uses = load_tag_uses(export_dir)
 save_python_header(parties)
 save_parties(parties)
 save_tag_uses(export_dir, tag_uses)
-#print "Generating C header..."
+#print("Generating C header...")
 #save_c_header()
-#print "Generating Python header..."
-#print "Finished."
+#print("Generating Python header...")
+#print("Finished.")

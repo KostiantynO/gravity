@@ -1,3 +1,4 @@
+# header_ground_types.py
 ground_gray_stone = 0
 ground_brown_stone = 1
 ground_turf = 2

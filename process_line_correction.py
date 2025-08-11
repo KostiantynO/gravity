@@ -1,8 +1,9 @@
+# process_line_correction.py
 file = open("module_scripts.py","r")
 lines = file.readlines()
 file.close()
 
-file = open("module_scripts.py","w")
+file = open("module_scripts.py","w",newline="\n")
 
 level = 0
 for line in lines:
@@ -25,7 +26,7 @@ for line in lines:
   newlevel -= line.count("]", 0, acceptableindex)
   if (level_positive_change == 0):
     level = newlevel
-  for i in xrange(level):
+  for i in range(level):
     file.write("  ")
   level = newlevel
   file.write("%s\n"%line)

@@ -1,3 +1,4 @@
+# module_troops.py
 import random
 
 from header_common import *

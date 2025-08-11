@@ -1,3 +1,4 @@
+# ID_strings.py
 str_no_string = 0
 str_empty_string = 1
 str_yes = 2

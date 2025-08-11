@@ -1,3 +1,4 @@
+# module_constants.py
 from ID_items import *
 from ID_quests import *
 from ID_factions import *

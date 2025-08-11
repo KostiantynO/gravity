@@ -1,3 +1,4 @@
+# header_scene_props.py
 ###################################################
 # header_scene_props.py
 # This file contains declarations for scene props

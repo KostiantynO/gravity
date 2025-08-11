@@ -1,3 +1,4 @@
+# module_strings.py
 # -*- coding: cp1254 -*-
 strings = [
   ("no_string", "NO STRING!"),

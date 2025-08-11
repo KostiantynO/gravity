@@ -1,3 +1,4 @@
+# header_item_modifiers.py
 imod_plain = 0
 imod_cracked = 1
 imod_rusty = 2

@@ -1,3 +1,4 @@
+# module_map_icons.py
 from header_map_icons import *
 from module_constants import *
 from header_operations import *

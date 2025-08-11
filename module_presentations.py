@@ -1,3 +1,4 @@
+# module_presentations.py
 from header_common import *
 from header_presentations import *
 from header_mission_templates import *
@@ -5,7 +6,6 @@ from ID_meshes import *
 from header_operations import *
 from header_triggers import *
 from module_constants import *
-import string
 
 ####################################################################################################################
 #  Each presentation record contains the following fields:

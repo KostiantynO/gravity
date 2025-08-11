@@ -1,3 +1,4 @@
+# ID_scenes.py
 scn_random_scene = 0
 scn_conversation_scene = 1
 scn_water = 2

@@ -1,3 +1,4 @@
+# header_factions.py
 ###################################################
 # header_factions.py
 # This file contains declarations for factions

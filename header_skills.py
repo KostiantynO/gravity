@@ -1,3 +1,4 @@
+# header_skills.py
 sf_base_att_str         = 0x000
 sf_base_att_agi         = 0x001
 sf_base_att_int         = 0x002

@@ -1,3 +1,4 @@
+# ID_meshes.py
 mesh_pic_bandits = 0
 mesh_pic_mb_warrior_1 = 1
 mesh_pic_messenger = 2

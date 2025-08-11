@@ -1,3 +1,4 @@
+# header_strings.py
 ###################################################
 # header_strings.py
 # This file contains declarations for strings

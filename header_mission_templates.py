@@ -1,3 +1,4 @@
+# header_mission_templates.py
 ###################################################
 # header_mission_templates.py
 # This file contains declarations for mission templates

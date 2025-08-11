@@ -1,4 +1,4 @@
-import string
+# process_animations.py
 from header_common import *
 from module_info import *
 from module_animations import *
@@ -8,7 +8,7 @@ def compile_action_sets(actions):
   action_codes = []
   for action in actions:
     index = -1
-    for i_action_code in xrange(len(action_codes)):
+    for i_action_code in range(len(action_codes)):
       if action_codes[i_action_code] == action[0]:
         index = i_action_code
         break
@@ -21,13 +21,13 @@ def compile_action_sets(actions):
   return action_codes
 
 def write_actions(action_set,num_action_codes,action_codes,file_name):
-  file = open(export_dir + file_name,"w")
+  file = open(export_dir + file_name,"w",newline="\n")
   file.write("%d\n"%num_action_codes)
-  for i_action_code in xrange(num_action_codes):
+  for i_action_code in range(num_action_codes):
     action_found = 0
     for action in action_set:
       if action[0] == i_action_code:
-        file.write(" %s %d %d "%(action_codes[i_action_code],action[1], action[2])) #print flags
+        file.write(" %s %d %d "%(action_codes[i_action_code],action[1], action[2])) #print(flags)
         file.write(" %d\n"%(len(action)-3))
         for elem in action[3:]:
           file.write("  %f %s %d %d %d "%(elem[0],elem[1],elem[2],elem[3],elem[4]))
@@ -49,13 +49,13 @@ def write_actions(action_set,num_action_codes,action_codes,file_name):
       file.write(" none 0 0\n") #oops
 
 def save_python_header(action_codes):
-  ofile = open("./ID_animations.py","w")
-  for i_anim in xrange(len(action_codes)):
+  ofile = open("./ID_animations.py","w",newline="\n")
+  for i_anim in range(len(action_codes)):
     ofile.write("anim_%s = %d\n"%(action_codes[i_anim],i_anim))
   ofile.write("\n\n")
   ofile.close()
 
-print "Exporting animations..."
+print("Exporting animations...")
 action_codes = compile_action_sets(animations)
 save_python_header(action_codes)
 write_actions(animations,len(action_codes),action_codes,"actions.txt")
