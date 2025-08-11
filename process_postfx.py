@@ -7,7 +7,7 @@ def write_python_header(postfx_params_list):
   file = open("./ID_postfx_params.py","w",newline="\n")
   for i_postfx_param in range(len(postfx_params_list)):
     file.write("pfx_%s = %d\n"%(postfx_params_list[i_postfx_param][0],i_postfx_param))
-  file.write("\n")
+  # file.write("\n")
   file.close()
 
 def write_postfx_params(postfx_params_list):

@@ -100,8 +100,8 @@ def get_id_value(tag, identifier, tag_uses):
     add_tag_use(tag_uses,tag_type,id_no)
   return (tag_type, id_no)
 
-def get_identifier_value(str, tag_uses):
-  underscore_pos = string.find(str, "_")
+def get_identifier_value(str:str, tag_uses):
+  underscore_pos = str.find( "_")
   result = -1
   if (underscore_pos > 0):
     tag_str = str[0:underscore_pos]
