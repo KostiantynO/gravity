@@ -25,7 +25,7 @@ def save_python_header():
   ofile = open("./ID_skills.py","w",newline="\n")
   for i_skill in range(len(skills)):
     ofile.write("skl_%s = %d\n"%(skills[i_skill][0],i_skill))
-  ofile.write("\n")
+  # ofile.write("\n")
   ofile.close()
 
 print("Exporting skills...")

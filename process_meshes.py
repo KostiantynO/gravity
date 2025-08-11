@@ -17,7 +17,7 @@ def save_python_header():
   ofile = open("./ID_meshes.py","w",newline="\n")
   for i_mesh in range(len(meshes)):
     ofile.write("mesh_%s = %d\n"%(meshes[i_mesh][0],i_mesh))
-  ofile.write("\n")
+  # ofile.write("\n")
   ofile.close()
 
 print("Exporting meshes...")

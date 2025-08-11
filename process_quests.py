@@ -22,7 +22,7 @@ def save_python_header():
     ofile.write("qst_%s = %d\n"%(quests[i_quest][0],i_quest))
   for i_quest in range(len(quests)):
     ofile.write("qsttag_%s = %d\n"%(quests[i_quest][0],opmask_quest_index|i_quest))
-  ofile.write("\n")
+  # ofile.write("\n")
   ofile.close()
 
 

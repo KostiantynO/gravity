@@ -18,7 +18,7 @@ def save_python_header():
   ofile = open("./ID_strings.py","w",newline="\n")
   for i_string in range(len(strings)):
     ofile.write("str_%s = %d\n"%(convert_to_identifier(strings[i_string][0]),i_string))
-  ofile.write("\n")
+  # ofile.write("\n")
   ofile.close()
 
 print("Exporting strings...")

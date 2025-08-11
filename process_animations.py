@@ -52,7 +52,7 @@ def save_python_header(action_codes):
   ofile = open("./ID_animations.py","w",newline="\n")
   for i_anim in range(len(action_codes)):
     ofile.write("anim_%s = %d\n"%(action_codes[i_anim],i_anim))
-  ofile.write("\n")
+  # ofile.write("\n")
   ofile.close()
 
 print("Exporting animations...")

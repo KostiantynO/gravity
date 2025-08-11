@@ -19,7 +19,7 @@ def save_python_header():
   ofile = open("./ID_info_pages.py","w",newline="\n")
   for i_info_page in range(len(info_pages)):
     ofile.write("ip_%s = %d\n"%(info_pages[i_info_page][0],i_info_page))
-  ofile.write("\n")
+  # ofile.write("\n")
   ofile.close()
 
 print("Exporting info_page data...")

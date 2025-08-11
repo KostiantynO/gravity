@@ -62,7 +62,7 @@ def save_python_header():
   file = open("./ID_factions.py","w",newline="\n")
   for i_faction in range(len(factions)):
     file.write("fac_%s = %d\n"%(factions[i_faction][0],i_faction))
-  file.write("\n")
+  # file.write("\n")
   file.close()
 
 print("Exporting faction data...")
