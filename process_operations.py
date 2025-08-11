@@ -1,6 +1,5 @@
 # process_operations.py
 import string
-import types
 
 from process_common import *
 from header_common import *
@@ -365,7 +364,7 @@ def insert_quick_string_with_auto_id(sentence,quick_strings):
 
 def process_param(param,global_vars_list,global_var_uses, local_vars_list, local_var_uses, tag_uses, quick_strings):
   result = 0
-  if (type(param) == types.StringType):
+  if isinstance(param, str):
     if (param[0] == '$'):
       check_varible_not_defined(param[1:], local_vars_list)
       result = get_variable(param, global_vars_list,global_var_uses)
@@ -391,7 +390,7 @@ def save_statement(ofile,opcode,no_variables,statement,variable_list,variable_us
     if (is_lhs_operation(opcode) == 1):
       if (lenstatement > 0):
         param = statement[1]
-        if (type(param) == types.StringType):
+        if isinstance(param, str):
           if (param[0] == ':'):
             add_variable(param[1:], local_vars_list, local_var_uses)
   else:
@@ -410,7 +409,7 @@ def compile_global_vars_in_statement(statement,variable_list, variable_uses):
     if (is_lhs_operation_for_global_vars(opcode) == 1):
       if (len(statement) > 1):
         param = statement[1]
-        if (type(param) == types.StringType):
+        if isinstance(param, str):
           if (statement[1][0] == '$'):
             add_variable(statement[1][1:], variable_list, variable_uses)
 

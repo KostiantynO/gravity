@@ -32,3 +32,11 @@ if (type(statement) != types.ListType) and (type(statement) != types.TupleType):
 # to
 if not isinstance(statement, (list, tuple)):
 ```
+
+[x] types.StringType:
+
+```py
+if (type(param) == types.StringType):
+# to
+if isinstance(param, str):
+```

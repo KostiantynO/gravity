@@ -7,7 +7,7 @@ def write_python_header(sounds):
   file = open("./ID_sounds.py","w",newline="\n")
   for i_sound in range(len(sounds)):
     file.write("snd_%s = %d\n"%(sounds[i_sound][0],i_sound))
-  file.write("\n\n")
+  file.write("\n")
   file.close()
 
 def write_sounds(sound_samples, sounds):

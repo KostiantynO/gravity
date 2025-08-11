@@ -1,5 +1,4 @@
 # process_parties.py
-import types
 from header_game_menus import *
 from module_info import *
 from module_game_menus import *
@@ -23,7 +22,7 @@ def save_parties(parties):
     file.write("p_%s %s %d "%(convert_to_identifier(party[0]),replace_spaces(party[1]),party[2]))
     menu_no = 0
     menu_param = party[3]
-    if (type(menu_param) == types.StringType):
+    if isinstance(menu_param, str):
       menu_no = find_object(game_menus,menu_param)
       if (menu_no < 0):
         print("Error: Unable to find menu-id :" + menu_param)
@@ -34,7 +33,7 @@ def save_parties(parties):
     file.write("%d %d %d %d %d "%(party[4], party[5], party[6], party[6],party[7]))
     ai_behavior_object = 0
     ai_param = party[8]
-    if (type(ai_param) == types.StringType):
+    if isinstance(ai_param, str):
       ai_behavior_object = find_object(parties,ai_param)
       if (ai_behavior_object < 0):
         print("Error: Unable to find party-id :" + ai_param)

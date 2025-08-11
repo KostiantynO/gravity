@@ -8,7 +8,7 @@ def save_python_header():
   ofile = open("./ID_music.py","w",newline="\n")
   for i_track in range(len(tracks)):
     ofile.write("track_%s = %d\n"%(tracks[i_track][0],i_track))
-  ofile.write("\n\n")
+  ofile.write("\n")
   ofile.close()
 
 def save_tracks():

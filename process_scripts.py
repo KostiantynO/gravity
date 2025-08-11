@@ -27,7 +27,7 @@ def save_python_header():
   file = open("./ID_scripts.py","w",newline="\n")
   for i_script in range(len(scripts)):
     file.write("script_%s = %d\n"%(convert_to_identifier(scripts[i_script][0]),i_script))
-  file.write("\n\n")
+  file.write("\n")
   file.close()
 
 
