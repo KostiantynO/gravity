@@ -1,5 +1,4 @@
 # process_info_pages.py
-import string
 
 from module_info import *
 from module_info_pages import *
@@ -12,7 +11,7 @@ def save_info_pages():
   ofile.write("%d\n"%(len(info_pages)))
   for i_info_page in range(len(info_pages)):
     info_page = info_pages[i_info_page]
-    ofile.write("ip_%s %s %s"%(info_page[0],string.replace(info_page[1]," ","_"), string.replace(info_page[2]," ","_")))
+    ofile.write("ip_%s %s %s"%(info_page[0],info_page[1].replace(" ","_"), info_page[2].replace(" ","_")))
     ofile.write("\n")
   ofile.close()
 

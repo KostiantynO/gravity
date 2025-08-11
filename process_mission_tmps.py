@@ -1,5 +1,4 @@
 # process_mission_tmps.py
-import string
 
 from module_info import *
 from module_mission_templates import *
@@ -41,7 +40,7 @@ def save_mission_templates(variables,variable_uses,tag_uses,quick_strings):
   for mission_template in mission_templates:
     file.write("mst_%s %s %d "%(convert_to_identifier(mission_template[mission_template_name_pos]),convert_to_identifier(mission_template[mission_template_name_pos]),mission_template[mission_template_flags_pos]))
     file.write(" %d\n"%(mission_template[mission_template_types_pos]))
-    file.write("%s \n"%(string.replace(mission_template[mission_template_desc_pos]," ","_")))
+    file.write("%s \n"%(mission_template[mission_template_desc_pos].replace(" ","_")))
     file.write("\n%d "%len(mission_template[mission_template_groups_pos]))
     for group in mission_template[mission_template_groups_pos]:
       save_mission_template_group(file,group)

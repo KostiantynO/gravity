@@ -1,5 +1,4 @@
 # process_quests.py
-import string
 
 from module_info import *
 from module_quests import *
@@ -12,8 +11,8 @@ def save_quests():
   ofile.write("%d\n"%(len(quests)))
   for i_quest in range(len(quests)):
     quest = quests[i_quest]
-    ofile.write("qst_%s %s %d "%(quest[0],(string.replace(quest[1]," ","_")),quest[2]))
-    ofile.write("%s "%(string.replace(quest[3]," ","_")))
+    ofile.write("qst_%s %s %d "%(quest[0],(quest[1].replace(" ","_")),quest[2]))
+    ofile.write("%s "%(quest[3].replace(" ","_")))
     ofile.write("\n")
   ofile.close()
 

@@ -403,7 +403,7 @@ def save_statement(ofile,opcode,no_variables,statement,variable_list,variable_us
 
 def compile_global_vars_in_statement(statement,variable_list, variable_uses):
   opcode = 0
-  if ((type(statement) != types.ListType) and (type(statement) != types.TupleType)):
+  if not isinstance(statement, (list, tuple)):
     opcode = statement
   else:
     opcode = statement[0]
@@ -424,7 +424,7 @@ def save_statement_block(ofile,statement_name,can_fail_statement,statement_block
   can_fail = 0
   for i in range(len(statement_block)):
     statement = statement_block[i]
-    if ((type(statement) != types.ListType) and (type(statement) != types.TupleType)):
+    if not isinstance(statement, (list, tuple)):
       opcode = statement
       no_variables = 1
     else:

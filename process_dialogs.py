@@ -1,6 +1,4 @@
 # process_dialogs.py
-import string
-import types
 
 from module_info import *
 from module_triggers import *
@@ -160,7 +158,7 @@ def create_auto_id2(sentence,auto_ids):
     auto_ids[auto_id] = text
     return auto_id
 
-def save_sentences(variable_list,variable_uses,sentences,tag_uses,quick_strings,input_states,output_states):
+def save_sentences(variable_list,variable_uses,sentences:List[Dialog],tag_uses,quick_strings,input_states,output_states):
   file = open(export_dir + "conversation.txt","w",newline="\n")
   file.write("dialogsfile version 2\n")
   file.write("%d\n"%len(sentences))
@@ -172,8 +170,7 @@ def save_sentences(variable_list,variable_uses,sentences,tag_uses,quick_strings,
       dialog_id = create_auto_id2(sentence,auto_ids)
       file.write("%s %d %d "%(dialog_id,sentence[speaker_pos],input_states[i]))
       save_statement_block(file, 0, 1, sentence[sentence_conditions_pos], variable_list,variable_uses,tag_uses,quick_strings)
-
-      file.write("%s "%(string.replace(sentence[text_pos]," ","_")))
+      file.write("%s "%(sentence[text_pos].replace(" ","_")))
       if (len(sentence[text_pos]) == 0):
         file.write("NO_TEXT ")
       file.write(" %d "%(output_states[i]))

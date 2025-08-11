@@ -12,6 +12,7 @@ from ID_party_templates import *
 
 from module_constants import *
 
+from typing import Any, List, Tuple, Union
 
 ####################################################################################################################
 # During a dialog, the dialog lines are scanned from top to bottom.
@@ -44,7 +45,20 @@ from module_constants import *
 # 7) Voice-over (string): sound filename for the voice over. Leave here empty for no voice over
 ####################################################################################################################
 
-dialogs = [
+DialogCommand = Tuple[Any, ...]
+
+Dialog = List[
+    Union[
+        int,               # anyone (probably int)
+        str,               # label like "start"
+        List[DialogCommand],  # list of command tuples
+        str,               # dialog line text
+        str,               # action string
+        List[Any]          # follow-up dialogs or empty list
+    ]
+]
+
+dialogs:List[Dialog] = [
   [anyone ,"start", [(store_conversation_troop, "$g_talk_troop"),
                      (store_conversation_agent, "$g_talk_agent"),
                      (store_troop_faction, "$g_talk_troop_faction", "$g_talk_troop"),

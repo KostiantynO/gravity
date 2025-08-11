@@ -1,5 +1,4 @@
 # process_skins.py
-import string
 from process_common import *
 from module_info import *
 from module_skins import *
@@ -9,11 +8,11 @@ num_voice_types = 2
 #####################
 
 
-def replace_spaces(s0):
-  return string.replace(s0," ","_")
+def replace_spaces(s0:str):
+  return s0.replace(" ","_")
 
 
-def write_face_tex(ofile,tex_set):
+def write_face_tex(ofile,tex_set:List[FaceTexture]):
   ofile.write(" %d "%len(tex_set))
   for tex in tex_set:
     color = tex[1]
@@ -40,7 +39,7 @@ def write_voices(ofile, voices):
     ofile.write(" %d %s "%(voice_rec[0],voice_rec[1]))
   ofile.write("\n")
 
-def export_skins(skins):
+def export_skins(skins:List[Skin]):
   ofile = open(export_dir + "skins.txt","w",newline="\n")
   ofile.write("skins_file version 1\n")
   if len(skins) > 16:

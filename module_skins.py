@@ -1,6 +1,7 @@
 # module_skins.py
 from header_skins import *
 from ID_particle_systems import *
+from typing import List, Tuple, Union, Optional
 ####################################################################################################################
 #  Each skin record contains the following fields:
 #  1) Skin id: used for referencing skins.
@@ -22,6 +23,33 @@ from ID_particle_systems import *
 # 17) Blood particles 2 (do not add this if you wish to use the default particles)
 # 17) Face key constraints (do not add this if you do not wish to use it)
 ####################################################################################################################
+
+
+FaceKey = Tuple[int, int, float, float, str]
+ConstraintEntry = Union[float, int, Tuple[float, int], Tuple[float, int], Tuple[float, int]]  # approx
+FaceKeyConstraint = List[ConstraintEntry]
+VoiceSound = Tuple[int, str]
+FaceTexture = Tuple[str, int, List[str], List[int]]
+Skin = Tuple[
+    str,                      # Skin id
+    int,                      # Skin flags
+    str,                      # Body mesh
+    str,                      # Calf mesh (left)
+    str,                      # Hand mesh (left)
+    str,                      # Head mesh
+    List[FaceKey],            # Face keys (list of tuples)
+    List[str],                # Hair meshes list
+    List[str],                # Beard meshes list
+    List[str],                # Hair textures list
+    List[str],                # Beard textures list
+    List[FaceTexture],        # Face textures list
+    List[VoiceSound],         # Voices list
+    str,                      # Skeleton name
+    float,                    # Scale
+    Optional[int],            # Blood particles 1 (can be None)
+    Optional[int],            # Blood particles 2 (can be None)
+    Optional[List[FaceKeyConstraint]]  # Face key constraints (optional)
+]
 
 man_face_keys = [
 (20,0, 0.7,-0.6, "Chin Size"),
@@ -129,7 +157,7 @@ face_width = 26
 comp_less_than = -1;
 comp_greater_than = 1;
 
-skins = [
+skins:List[Skin] = [
   (
     "man", 0,
     "man_body", "man_calf_l", "m_handL",
