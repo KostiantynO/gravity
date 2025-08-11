@@ -1,4 +1,3 @@
-# ID_info_pages.py
 ip_morale = 0
 ip_economy = 1
 ip_courtship = 2

@@ -1,4 +1,3 @@
-# ID_scene_props.py
 spr_invalid_object = 0
 spr_inventory = 1
 spr_empty = 2

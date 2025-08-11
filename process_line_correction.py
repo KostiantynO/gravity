@@ -3,6 +3,10 @@ file = open("module_scripts.py","r")
 lines = file.readlines()
 file.close()
 
+# Remove trailing blank lines from the input to avoid multiple blank lines at EOF
+while lines and lines[-1].strip() == "":
+  lines.pop()
+
 file = open("module_scripts.py","w",newline="\n")
 
 level = 0

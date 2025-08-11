@@ -1,4 +1,3 @@
-# ID_party_templates.py
 pt_none = 0
 pt_rescued_prisoners = 1
 pt_enemy = 2

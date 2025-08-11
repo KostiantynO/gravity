@@ -1,4 +1,3 @@
-# ID_items.py
 itm_no_item = 0
 itm_tutorial_spear = 1
 itm_tutorial_club = 2

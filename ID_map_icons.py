@@ -1,4 +1,3 @@
-# ID_map_icons.py
 icon_player = 0
 icon_player_horseman = 1
 icon_gray_knight = 2

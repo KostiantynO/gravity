@@ -1,4 +1,3 @@
-# ID_menus.py
 menu_start_game_0 = 0
 menu_start_phase_2 = 1
 menu_start_game_3 = 2

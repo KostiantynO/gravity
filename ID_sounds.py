@@ -1,4 +1,3 @@
-# ID_sounds.py
 snd_click = 0
 snd_tutorial_1 = 1
 snd_tutorial_2 = 2
